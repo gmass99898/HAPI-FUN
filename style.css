@@ -1,1 +1,48 @@
 
+body{
+    margin:0;
+    font-family: Arial, sans-serif;
+    background:#f8f7fb;
+    color:#14101f;
+}
+
+header{
+    background:#1A1033;
+    color:white;
+
+    text-align:center;
+    padding:80px 20px;
+}
+
+header h1{
+    color:#FF4DA6;
+    font-size:48px;
+}
+
+header a{
+    display:inline-block;
+
+    margin-top:20px;
+
+    background:#D6006F;
+
+    color:white;
+
+    text-decoration:none;
+
+    padding:12px 24px;
+
+    border-radius:10px;
+}
+
+section{
+    max-width:900px;
+
+    margin:auto;
+
+    padding:60px 20px;
+}
+
+h2{
+    color:#D6006F;
+}
