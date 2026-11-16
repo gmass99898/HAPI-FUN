@@ -1,1 +1,178 @@
 
+<!DOCTYPE html>
+<html lang="zh-HK">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>HAPI FUN | 台式夾公仔機合作平台</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+
+    <img
+        src="hapi-fun-logo-horizontal-white-2400.png"
+        alt="HAPI FUN Logo"
+        width="350">
+
+    <p>
+        台式夾公仔機經營合作夥伴
+    </p>
+
+    <p>
+        深水埗 ｜ 旺角 ｜ 銅鑼灣
+    </p>
+
+</header>
+
+<section>
+
+    <h2>關於我們</h2>
+
+    <p>
+        HAPI FUN 於香港三大旺區設有地舖，
+        專注提供夾公仔機租賃合作方案，
+        為台主提供場務及技術支援。
+    </p>
+
+</section>
+
+<section>
+
+    <h2>店舖位置</h2>
+
+    <ul>
+        <li>深水埗福榮街73號地舖</li>
+        <li>旺角西洋菜南街164號地舖</li>
+        <li>銅鑼灣軒尼詩道482號地舖</li>
+    </ul>
+
+</section>
+
+<section>
+
+    <h2>服務內容</h2>
+
+    <ul>
+        <li>機台招租</li>
+        <li>場務支援</li>
+        <li>技術支援</li>
+        <li>兌幣及執台支援</li>
+    </ul>
+
+</section>
+
+<section>
+
+    <h2>查詢租機方案</h2>
+
+    <form id="rentalForm">
+
+        <label>客戶稱呼</label>
+        <input
+            type="text"
+            id="name"
+            required>
+
+        <label>聯絡電話</label>
+        <input
+            type="tel"
+            id="phone"
+            required>
+
+        <label>有興趣分店（可多選）</label>
+
+        <div class="checkbox-group">
+
+            <label>
+                <input
+                    type="checkbox"
+                    class="branch"
+                    value="銅鑼灣">
+                銅鑼灣
+            </label>
+
+            <label>
+                <input
+                    type="checkbox"
+                    class="branch"
+                    value="旺角">
+                旺角
+            </label>
+
+            <label>
+                <input
+                    type="checkbox"
+                    class="branch"
+                    value="深水埗">
+                深水埗
+            </label>
+
+        </div>
+
+        <button type="submit">
+            WhatsApp 查詢租機方案
+        </button>
+
+    </form>
+
+</section>
+
+<footer>
+
+    <p>
+        WhatsApp：9850 2809
+    </p>
+
+</footer>
+
+<script>
+
+document
+.getElementById("rentalForm")
+.addEventListener("submit", function(e){
+
+    e.preventDefault();
+
+    const name =
+        document.getElementById("name").value;
+
+    const phone =
+        document.getElementById("phone").value;
+
+    const branches =
+        Array.from(
+            document.querySelectorAll(".branch:checked")
+        )
+        .map(item => item.value)
+        .join("、");
+
+    const message =
+`你好，
+
+我係 ${name}
+
+電話係 ${phone}
+
+有興趣租用分店：
+${branches}
+
+想了解租機方案。`;
+
+    const whatsappURL =
+`https://wa.me/85298502809?text=${encodeURIComponent(message)}`;
+
+    window.open(whatsappURL, "_blank");
+
+});
+
+</script>
+
+</body>
+
+</html>
