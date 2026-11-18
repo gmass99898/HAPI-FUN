@@ -1,48 +1,238 @@
+/* =========================
+   HAPI FUN Theme
+========================= */
 
-body{
-    margin:0;
+body {
+    margin: 0;
+    padding: 0;
+
     font-family: Arial, sans-serif;
-    background:#f8f7fb;
-    color:#14101f;
+
+    background: linear-gradient(
+        180deg,
+        #120622 0%,
+        #1c0933 100%
+    );
+
+    color: white;
 }
 
-header{
-    background:#1A1033;
-    color:white;
+/* =========================
+   Header
+========================= */
 
-    text-align:center;
-    padding:80px 20px;
+header {
+    text-align: center;
+
+    padding: 60px 20px 40px;
 }
 
-header h1{
-    color:#FF4DA6;
-    font-size:48px;
+.hero-logo {
+    width: 220px;
+    max-width: 70%;
+
+    margin-bottom: 10px;
 }
 
-header a{
-    display:inline-block;
+.tagline {
+    font-size: 22px;
 
-    margin-top:20px;
+    font-weight: bold;
 
-    background:#D6006F;
-
-    color:white;
-
-    text-decoration:none;
-
-    padding:12px 24px;
-
-    border-radius:10px;
+    color: #ffffff;
 }
 
-section{
-    max-width:900px;
+.branches {
+    color: #ffb6d9;
 
-    margin:auto;
-
-    padding:60px 20px;
+    font-size: 18px;
 }
 
-h2{
-    color:#D6006F;
+
+/* =========================
+   Sections
+========================= */
+
+section {
+
+    max-width: 900px;
+
+    margin: 25px auto;
+
+    padding: 30px;
+
+    background: #21103d;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 6px 20px rgba(0,0,0,0.25);
 }
+
+h2 {
+    color: #ff4da6;
+
+    margin-top: 0;
+}
+
+p,
+li {
+    line-height: 1.8;
+}
+
+
+/* =========================
+   Form
+========================= */
+
+.contact-form {
+    max-width: 600px;
+
+    margin: auto;
+}
+
+.contact-form label {
+
+    display: block;
+
+    margin-top: 20px;
+
+    margin-bottom: 8px;
+
+    font-weight: bold;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="tel"] {
+
+    width: 100%;
+
+    box-sizing: border-box;
+
+    padding: 12px;
+
+    border-radius: 10px;
+
+    border: 1px solid #444;
+
+    background: #2d184d;
+
+    color: white;
+}
+
+.contact-form input:focus {
+
+    outline: none;
+
+    border-color: #ff4da6;
+}
+
+
+/* =========================
+   Checkbox
+========================= */
+
+.checkbox-group {
+
+    margin-top: 10px;
+}
+
+.checkbox-group label {
+
+    display: block;
+
+    margin-bottom: 12px;
+
+    font-weight: normal;
+}
+
+
+/* =========================
+   Button
+========================= */
+
+.cta-button {
+
+    margin-top: 25px;
+
+    background: #ff2f92;
+
+    color: white;
+
+    border: none;
+
+    border-radius: 12px;
+
+    padding: 16px 28px;
+
+    font-size: 18px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    width: 100%;
+
+    box-shadow:
+        0 0 20px rgba(255,79,166,0.4);
+
+    transition: all 0.25s ease;
+}
+
+.cta-button:hover {
+
+    background: #ff4da6;
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================
+   Links
+========================= */
+
+a {
+
+    color: #ff7ebf;
+
+    text-decoration: none;
+}
+
+a:hover {
+
+    color: white;
+}
+
+
+/* =========================
+   Footer
+========================= */
+
+footer {
+
+    display: none;
+}
+
+
+/* =========================
+   Mobile
+========================= */
+
+@media (max-width: 768px) {
+
+    section {
+
+        margin: 15px;
+
+        padding: 20px;
+    }
+
+    .tagline {
+
+        font-size: 18px;
+    }
+
+    .branches {
+
+        font-size: 16px;
+    }
