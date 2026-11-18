@@ -1,14 +1,77 @@
-
 <!DOCTYPE html>
 <html lang="zh-HK">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>HAPI FUN | 台式夾公仔機合作平台</title>
+    <title>HAPI FUN｜台式夾公仔機合作平台</title>
 
     <link rel="stylesheet" href="style.css">
+
+    <style>
+
+        .hero-logo{
+            width:220px;
+            max-width:70%;
+            margin-bottom:20px;
+        }
+
+        .tagline{
+            font-size:20px;
+            margin-top:10px;
+        }
+
+        .branches{
+            font-size:18px;
+            margin-top:10px;
+        }
+
+        .contact-form{
+            max-width:600px;
+            margin:auto;
+        }
+
+        .contact-form label{
+            display:block;
+            margin-top:20px;
+            margin-bottom:8px;
+            font-weight:bold;
+        }
+
+        .contact-form input[type="text"],
+        .contact-form input[type="tel"]{
+            width:100%;
+            padding:12px;
+            border-radius:8px;
+            border:1px solid #ccc;
+            box-sizing:border-box;
+        }
+
+        .checkbox-group{
+            margin-top:10px;
+        }
+
+        .checkbox-group label{
+            display:block;
+            margin-bottom:10px;
+            font-weight:normal;
+        }
+
+        .cta-button{
+            margin-top:25px;
+            background:#D6006F;
+            color:white;
+            border:none;
+            padding:14px 28px;
+            border-radius:10px;
+            cursor:pointer;
+            font-size:16px;
+        }
+
+        .cta-button:hover{
+            opacity:0.9;
+        }
+
+    </style>
 </head>
 
 <body>
@@ -18,13 +81,13 @@
     <img
         src="hapi-fun-logo-horizontal-white-2400.png"
         alt="HAPI FUN Logo"
-        width="350">
+        class="hero-logo">
 
-    <p>
+    <p class="tagline">
         台式夾公仔機經營合作夥伴
     </p>
 
-    <p>
+    <p class="branches">
         深水埗 ｜ 旺角 ｜ 銅鑼灣
     </p>
 
@@ -37,7 +100,7 @@
     <p>
         HAPI FUN 於香港三大旺區設有地舖，
         專注提供夾公仔機租賃合作方案，
-        為台主提供場務及技術支援。
+        為合作台主提供場務及技術支援。
     </p>
 
 </section>
@@ -60,9 +123,9 @@
 
     <ul>
         <li>機台招租</li>
-        <li>場務支援</li>
-        <li>技術支援</li>
-        <li>兌幣及執台支援</li>
+        <li>日常場務支援</li>
+        <li>技術維護支援</li>
+        <li>兌幣及執台協助</li>
     </ul>
 
 </section>
@@ -71,21 +134,29 @@
 
     <h2>查詢租機方案</h2>
 
-    <form id="rentalForm">
+    <form id="rentalForm" class="contact-form">
 
-        <label>客戶稱呼</label>
+        <label for="name">
+            客戶稱呼
+        </label>
+
         <input
             type="text"
             id="name"
             required>
 
-        <label>聯絡電話</label>
+        <label for="phone">
+            聯絡電話
+        </label>
+
         <input
             type="tel"
             id="phone"
             required>
 
-        <label>有興趣分店（可多選）</label>
+        <label>
+            有興趣分店（可多選）
+        </label>
 
         <div class="checkbox-group">
 
@@ -115,8 +186,12 @@
 
         </div>
 
-        <button type="submit">
+        <button
+            type="submit"
+            class="cta-button">
+
             WhatsApp 查詢租機方案
+
         </button>
 
     </form>
@@ -164,15 +239,17 @@ ${branches}
 
 想了解租機方案。`;
 
-    const whatsappURL =
+    const whatsappUrl =
 `https://wa.me/85298502809?text=${encodeURIComponent(message)}`;
 
-    window.open(whatsappURL, "_blank");
+    window.open(
+        whatsappUrl,
+        "_blank"
+    );
 
 });
 
 </script>
 
 </body>
-
 </html>
